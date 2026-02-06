@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>French Residence Permit Tracker</title>
+    <meta name="description"
+        content="Track your progress on French residence permit renewal or Carte de Résident application">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🇫🇷</span>
+                    <h1>Residence Permit Tracker</h1>
+                </div>
+                <p class="tagline">Suivez votre demande • Track your application</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Permit Type Selector -->
+            <section class="permit-selector card">
+                <h2>Select Your Application Type</h2>
+                <div class="selector-container">
+                    <select id="permitTypeSelect" class="permit-dropdown">
+                        <option value="">-- Choose your permit type --</option>
+                    </select>
+                </div>
+                <div id="permitDescription" class="permit-description hidden"></div>
+            </section>
+
+            <!-- Progress Section -->
+            <section id="progressSection" class="progress-section card hidden">
+                <div class="progress-header">
+                    <h2>Your Progress</h2>
+                    <span id="progressPercentage" class="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div id="progressBar" class="progress-bar" style="width: 0%"></div>
+                </div>
+                <div class="progress-stats">
+                    <span id="progressStats" class="stats-text">0 of 0 documents completed</span>
+                    <button id="resetButton" class="reset-button">Reset Progress</button>
+                </div>
+            </section>
+
+            <!-- Documents Checklist -->
+            <section id="documentsSection" class="documents-section hidden">
+                <h2>Required Documents</h2>
+                <p class="section-subtitle">Check off each document as you obtain it</p>
+                <div id="documentsList" class="documents-list"></div>
+            </section>
+
+            <!-- Important Links -->
+            <section id="linksSection" class="links-section card hidden">
+                <h2>📎 Important Links</h2>
+                <div id="importantLinks" class="links-list"></div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="disclaimer">
+                    <strong>Disclaimer:</strong> This tool is for informational purposes only.
+                    Always verify requirements with your local prefecture and
+                    <a href="https://www.service-public.fr/" target="_blank" rel="noopener">service-public.fr</a>.
+                </p>
+                <p class="source">
+                    Source: <a href="https://www.service-public.fr/" target="_blank"
+                        rel="noopener">service-public.gouv.fr</a> (Official French Government Portal)
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

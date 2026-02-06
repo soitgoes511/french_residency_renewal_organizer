@@ -1,0 +1,18 @@
+# French Residence Permit Tracker
+# Docker Compose configuration for local development
+
+services:
+  app:
+    build: .
+    container_name: residence-permit-tracker
+    ports:
+      - "5000:5000"
+    volumes:
+      # Persist SQLite database across restarts
+      - ./data:/app/data
+    environment:
+      - DATABASE_PATH=/app/data/residence.db
+    restart: unless-stopped
+
+# Note: The data directory will be created automatically
+# Your progress is saved in ./data/residence.db
