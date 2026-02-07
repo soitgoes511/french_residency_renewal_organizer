@@ -40,6 +40,13 @@
                 <div id="permitDescription" class="permit-description hidden"></div>
             </section>
 
+            <!-- Profile Selector -->
+            <section id="profileSection" class="profile-section card hidden">
+                <h2>Your Situation</h2>
+                <p class="section-subtitle">Select all that apply to see relevant documents</p>
+                <div id="profileList" class="profile-list"></div>
+            </section>
+
             <!-- Progress Section -->
             <section id="progressSection" class="progress-section card hidden">
                 <div class="progress-header">
@@ -72,6 +79,7 @@
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
+                <p id="lastVerified" class="last-verified"></p>
                 <p class="disclaimer">
                     <strong>Disclaimer:</strong> This tool is for informational purposes only.
                     Always verify requirements with your local prefecture and
@@ -83,6 +91,30 @@
                 </p>
             </div>
         </footer>
+    </div>
+
+    <!-- Notes Modal -->
+    <div id="notesModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Document Notes</h3>
+                <button class="modal-close" onclick="closeNotesModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="notesDocName" class="notes-doc-name"></p>
+                <textarea id="notesInput" class="notes-textarea"
+                    placeholder="Add your personal notes here..."></textarea>
+                <div class="due-date-section">
+                    <label for="dueDateInput">Due Date (optional):</label>
+                    <input type="date" id="dueDateInput" class="due-date-input">
+                    <button id="clearDueDate" class="clear-date-btn">Clear</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeNotesModal()">Cancel</button>
+                <button class="btn-primary" onclick="saveNotes()">Save</button>
+            </div>
+        </div>
     </div>
 
     <script src="app.js"></script>

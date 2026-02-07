@@ -1,0 +1,79 @@
+# French Residence Permit Tracker - Document Configuration
+# Source: https://www.service-public.fr/
+# Last verified: 2026-02-07
+
+metadata:
+  last_verified: "2026-02-07"
+  source_url: "https://www.service-public.fr/"
+  notes: "Requirements based on service-public.gouv.fr official documentation"
+
+# Applicant profiles - users can select one or more
+profiles:
+  common:
+    id: "common"
+    name_en: "Common Requirements"
+    name_fr: "Exigences communes"
+    description_en: "Documents required for all applicants"
+    description_fr: "Documents requis pour tous les demandeurs"
+    icon: "📋"
+    
+  spouse_french:
+    id: "spouse_french"
+    name_en: "Spouse of French Citizen"
+    name_fr: "Époux de Français"
+    description_en: "Additional documents for those married to a French national"
+    description_fr: "Documents supplémentaires pour les conjoints de Français"
+    icon: "💍"
+    
+  worker:
+    id: "worker"
+    name_en: "Worker / Employee"
+    name_fr: "Salarié"
+    description_en: "Documents for employed applicants"
+    description_fr: "Documents pour les salariés"
+    icon: "💼"
+    
+  self_employed:
+    id: "self_employed"
+    name_en: "Self-Employed / Business Owner"
+    name_fr: "Travailleur indépendant"
+    description_en: "Documents for self-employed or business owners"
+    description_fr: "Documents pour les travailleurs indépendants"
+    icon: "🏢"
+
+# Document categories
+categories:
+  identity:
+    name_en: "Identity Documents"
+    name_fr: "Documents d'identité"
+    icon: "🪪"
+    
+  residence:
+    name_en: "Proof of Residence"
+    name_fr: "Justificatifs de domicile"
+    icon: "🏠"
+    
+  financial:
+    name_en: "Financial Documents"
+    name_fr: "Documents financiers"
+    icon: "💰"
+    
+  administrative:
+    name_en: "Administrative Documents"
+    name_fr: "Documents administratifs"
+    icon: "📋"
+    
+  integration:
+    name_en: "Integration Requirements"
+    name_fr: "Conditions d'intégration"
+    icon: "🇫🇷"
+    
+  family:
+    name_en: "Family Documents"
+    name_fr: "Documents familiaux"
+    icon: "👨‍👩‍👧"
+    
+  payment:
+    name_en: "Payment"
+    name_fr: "Paiement"
+    icon: "💳"

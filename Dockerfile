@@ -1,19 +1,22 @@
 # French Residence Permit Tracker
-# Docker image for running the application
+# Dockerfile with YAML configuration support
 
 FROM python:3.11-slim
 
-# Set working directory
 WORKDIR /app
 
-# Set environment variables
+# Environment variables
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 ENV DATABASE_PATH=/app/data/residence.db
+ENV CONFIG_DIR=/app/config
 
 # Install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy configuration files
+COPY config/ ./config/
 
 # Copy application code
 COPY app/ ./

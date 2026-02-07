@@ -1,0 +1,182 @@
+# Titre de Séjour (Renewal) Documents
+# Source: https://www.service-public.fr/particuliers/vosdroits/N110
+# Last verified: 2026-02-07
+
+permit_type:
+  id: "titre_sejour"
+  name_en: "Residence Permit (Renewal)"
+  name_fr: "Titre de Séjour"
+  description: "Renewal of your current residence permit (typically 1-4 years)."
+  official_url: "https://www.service-public.fr/particuliers/vosdroits/N110"
+  cost: 225
+  last_verified: "2026-02-07"
+
+documents:
+  # Identity documents (all profiles)
+  - id: "ts_passport"
+    profiles: ["common"]
+    category: "identity"
+    name_fr: "Passeport valide"
+    name_en: "Valid Passport"
+    description: "Pages showing civil status, validity dates, entry stamps, and visas."
+    link: null
+    link_text: "Already possessed"
+    validity_days: null
+
+  - id: "ts_current_permit"
+    profiles: ["common"]
+    category: "identity"
+    name_fr: "Titre de séjour actuel"
+    name_en: "Current Residence Permit"
+    description: "Your current titre de séjour that you are renewing."
+    link: null
+    link_text: "Already possessed"
+    validity_days: null
+
+  - id: "ts_photos"
+    profiles: ["common"]
+    category: "identity"
+    name_fr: "3 photos d'identité / e-photo"
+    name_en: "3 ID Photos / e-photo"
+    description: "Recent passport-style photos or digital e-photo code from an approved service."
+    link: "https://www.service-public.fr/particuliers/vosdroits/F10619"
+    link_text: "Photo requirements"
+    validity_days: null
+
+  - id: "ts_birth_certificate"
+    profiles: ["common"]
+    category: "identity"
+    name_fr: "Acte de naissance"
+    name_en: "Birth Certificate"
+    description: "Full copy of your birth certificate. For foreign-born, may need apostille and sworn translation."
+    link: null
+    link_text: "Already possessed or request from home country"
+    validity_days: null
+
+  # Residence documents
+  - id: "ts_proof_of_address"
+    profiles: ["common"]
+    category: "residence"
+    name_fr: "Justificatif de domicile (moins de 3 mois)"
+    name_en: "Proof of Address (less than 3 months)"
+    description: "Utility bill (electricity, gas, water, internet), rent receipt, or property tax notice."
+    link: "https://www.service-public.fr/particuliers/vosdroits/F33052"
+    link_text: "Official requirements"
+    validity_days: 90
+
+  # Financial documents
+  - id: "ts_tax_notice"
+    profiles: ["common"]
+    category: "financial"
+    name_fr: "Avis d'imposition"
+    name_en: "Tax Notice"
+    description: "Your most recent French tax notice (avis d'imposition)."
+    link: "https://www.impots.gouv.fr/"
+    link_text: "Tax portal"
+    validity_days: null
+
+  # Worker-specific documents
+  - id: "ts_resources"
+    profiles: ["worker"]
+    category: "financial"
+    name_fr: "Justificatifs de ressources"
+    name_en: "Proof of Resources"
+    description: "Last 3 pay slips, employer attestation letter, or employment contract."
+    link: null
+    link_text: "Request from employer"
+    validity_days: 90
+
+  - id: "ts_employment_contract"
+    profiles: ["worker"]
+    category: "financial"
+    name_fr: "Contrat de travail ou attestation employeur"
+    name_en: "Employment Contract or Employer Letter"
+    description: "Current employment contract or attestation from employer."
+    link: null
+    link_text: "Request from employer"
+    validity_days: null
+
+  # Self-employed documents
+  - id: "ts_kbis"
+    profiles: ["self_employed"]
+    category: "financial"
+    name_fr: "Extrait K-bis"
+    name_en: "K-bis Extract"
+    description: "Proof of business registration (less than 3 months old)."
+    link: "https://www.infogreffe.fr/"
+    link_text: "Infogreffe"
+    validity_days: 90
+
+  - id: "ts_business_income"
+    profiles: ["self_employed"]
+    category: "financial"
+    name_fr: "Justificatifs de revenus professionnels"
+    name_en: "Proof of Business Income"
+    description: "Tax returns, business accounts, or revenue declarations."
+    link: null
+    link_text: "From your accountant"
+    validity_days: null
+
+  # Spouse of French citizen documents
+  - id: "ts_marriage_cert"
+    profiles: ["spouse_french"]
+    category: "family"
+    name_fr: "Acte de mariage"
+    name_en: "Marriage Certificate"
+    description: "Full copy of marriage certificate, less than 3 months old."
+    link: "https://www.service-public.fr/particuliers/vosdroits/F1432"
+    link_text: "Marriage certificate info"
+    validity_days: 90
+
+  - id: "ts_spouse_nationality"
+    profiles: ["spouse_french"]
+    category: "family"
+    name_fr: "Justificatif de nationalité française du conjoint"
+    name_en: "Spouse's French Nationality Proof"
+    description: "Spouse's CNI, passport, or certificate of French nationality."
+    link: null
+    link_text: "Spouse's ID document"
+    validity_days: null
+
+  - id: "ts_community_life"
+    profiles: ["spouse_french"]
+    category: "family"
+    name_fr: "Justificatif de communauté de vie"
+    name_en: "Proof of Living Together"
+    description: "Joint utility bills, lease with both names, joint tax declaration, or joint bank account."
+    link: null
+    link_text: "Joint household documents"
+    validity_days: 180
+
+  # Administrative documents
+  - id: "ts_health_insurance"
+    profiles: ["common"]
+    category: "administrative"
+    name_fr: "Attestation d'affiliation Sécurité Sociale"
+    name_en: "Social Security Certificate"
+    description: "Attestation from Ameli showing your affiliation to French social security."
+    link: "https://www.ameli.fr/"
+    link_text: "Ameli - Download attestation"
+    validity_days: null
+
+  # Integration documents
+  - id: "ts_republican_commitment"
+    profiles: ["common"]
+    category: "integration"
+    name_fr: "Engagement à respecter les principes de la République"
+    name_en: "Republican Principles Commitment"
+    description: "Signed document committing to respect the principles of the French Republic (required since July 2024)."
+    link: "https://www.service-public.fr/particuliers/vosdroits/F38329"
+    link_text: "Download form"
+    validity_days: null
+
+  # Payment
+  - id: "ts_timbre_fiscal"
+    profiles: ["common"]
+    category: "payment"
+    name_fr: "Timbre fiscal (225€)"
+    name_en: "Tax Stamp (€225)"
+    description: "€200 tax + €25 stamp duty. Can be purchased online. Required at card pickup."
+    link: "https://timbres.impots.gouv.fr/"
+    link_text: "Purchase online"
+    validity_days: null

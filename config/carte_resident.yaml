@@ -1,0 +1,222 @@
+# Carte de Résident de Longue Durée-UE (10-Year Card) Documents
+# Source: https://www.service-public.fr/particuliers/vosdroits/F17359
+# Last verified: 2026-02-07
+
+permit_type:
+  id: "carte_resident"
+  name_en: "EU Long-Term Resident Card (10 years)"
+  name_fr: "Carte de Résident de Longue Durée-UE"
+  description: "A 10-year residence card for foreigners who have lived legally in France for at least 5 years."
+  official_url: "https://www.service-public.fr/particuliers/vosdroits/F17359"
+  cost: 225
+  last_verified: "2026-02-07"
+
+documents:
+  # Common / Identity documents (all profiles)
+  - id: "cr_passport"
+    profiles: ["common"]
+    category: "identity"
+    name_fr: "Passeport valide"
+    name_en: "Valid Passport"
+    description: "Pages showing civil status, validity dates, entry stamps, and visas."
+    link: null
+    link_text: "Already possessed"
+    validity_days: null
+
+  - id: "cr_birth_certificate"
+    profiles: ["common"]
+    category: "identity"
+    name_fr: "Copie intégrale d'acte de naissance"
+    name_en: "Full Birth Certificate Copy"
+    description: "Recent copy with all mentions. For foreign-born, must be apostilled and translated by a sworn translator."
+    link: "https://www.diplomatie.gouv.fr/fr/services-aux-francais/l-annuaire-des-traducteurs-interpretes-assermenters/"
+    link_text: "Find a sworn translator"
+    validity_days: null
+
+  - id: "cr_photos"
+    profiles: ["common"]
+    category: "identity"
+    name_fr: "3 photos d'identité / e-photo"
+    name_en: "3 ID Photos / e-photo"
+    description: "Recent passport-style photos or digital e-photo code from an approved service."
+    link: "https://www.service-public.fr/particuliers/vosdroits/F10619"
+    link_text: "Photo requirements"
+    validity_days: null
+
+  # Residence documents
+  - id: "cr_proof_of_address"
+    profiles: ["common"]
+    category: "residence"
+    name_fr: "Justificatif de domicile (moins de 6 mois)"
+    name_en: "Proof of Address (less than 6 months)"
+    description: "Utility bill (electricity, gas, water, internet), rent receipt, or property tax notice."
+    link: "https://www.service-public.fr/particuliers/vosdroits/F33052"
+    link_text: "Official requirements"
+    validity_days: 180
+
+  - id: "cr_residence_proof_5years"
+    profiles: ["common"]
+    category: "residence"
+    name_fr: "Justificatifs de séjour régulier (5 ans)"
+    name_en: "Proof of Legal Residence (5 years)"
+    description: "Previous residence permits, renewal receipts, school certificates, tax notices proving continuous legal residence."
+    link: null
+    link_text: "Gather from your records"
+    validity_days: null
+
+  # Financial documents
+  - id: "cr_resources_5years"
+    profiles: ["common"]
+    category: "financial"
+    name_fr: "Justificatifs de ressources (5 dernières années)"
+    name_en: "Proof of Resources (last 5 years)"
+    description: "Pay slips, tax notices (avis d'imposition), pension statements, employment contracts. Social benefits are excluded."
+    link: "https://www.impots.gouv.fr/"
+    link_text: "Tax portal (avis d'imposition)"
+    validity_days: null
+
+  # Worker-specific documents
+  - id: "cr_employment_contract"
+    profiles: ["worker"]
+    category: "financial"
+    name_fr: "Contrat de travail"
+    name_en: "Employment Contract"
+    description: "Current employment contract or employer attestation."
+    link: null
+    link_text: "Request from employer"
+    validity_days: null
+
+  - id: "cr_payslips"
+    profiles: ["worker"]
+    category: "financial"
+    name_fr: "Bulletins de salaire (3 derniers mois)"
+    name_en: "Pay Slips (last 3 months)"
+    description: "Your three most recent pay slips."
+    link: null
+    link_text: "Request from employer"
+    validity_days: 90
+
+  # Self-employed specific documents
+  - id: "cr_kbis"
+    profiles: ["self_employed"]
+    category: "financial"
+    name_fr: "Extrait K-bis ou inscription registre"
+    name_en: "K-bis Extract or Registry Inscription"
+    description: "Proof of business registration (less than 3 months old)."
+    link: "https://www.infogreffe.fr/"
+    link_text: "Infogreffe"
+    validity_days: 90
+
+  - id: "cr_business_accounts"
+    profiles: ["self_employed"]
+    category: "financial"
+    name_fr: "Bilans comptables"
+    name_en: "Business Financial Statements"
+    description: "Last 2-3 years of business accounts."
+    link: null
+    link_text: "From your accountant"
+    validity_days: null
+
+  # Spouse of French citizen documents
+  - id: "cr_marriage_cert"
+    profiles: ["spouse_french"]
+    category: "family"
+    name_fr: "Acte de mariage"
+    name_en: "Marriage Certificate"
+    description: "Full copy of marriage certificate, less than 3 months old. If married abroad, must be transcribed to French civil registry."
+    link: "https://www.service-public.fr/particuliers/vosdroits/F1432"
+    link_text: "Marriage certificate info"
+    validity_days: 90
+
+  - id: "cr_spouse_nationality"
+    profiles: ["spouse_french"]
+    category: "family"
+    name_fr: "Justificatif de nationalité française du conjoint"
+    name_en: "Spouse's French Nationality Proof"
+    description: "Spouse's CNI (carte d'identité), passport, or certificate of French nationality."
+    link: null
+    link_text: "Spouse's ID document"
+    validity_days: null
+
+  - id: "cr_community_life"
+    profiles: ["spouse_french"]
+    category: "family"
+    name_fr: "Justificatif de communauté de vie"
+    name_en: "Proof of Living Together"
+    description: "Joint utility bills, lease with both names, joint tax declaration, or joint bank account."
+    link: null
+    link_text: "Joint household documents"
+    validity_days: 180
+
+  - id: "cr_spouse_declaration"
+    profiles: ["spouse_french"]
+    category: "family"
+    name_fr: "Déclaration sur l'honneur de vie commune"
+    name_en: "Declaration of Shared Life"
+    description: "Signed declaration attesting that you live together as a couple."
+    link: null
+    link_text: "Signed personal statement"
+    validity_days: null
+
+  # Administrative documents
+  - id: "cr_health_insurance"
+    profiles: ["common"]
+    category: "administrative"
+    name_fr: "Justificatif d'assurance maladie"
+    name_en: "Health Insurance Certificate"
+    description: "Carte Vitale or attestation from Ameli showing your affiliation to French social security."
+    link: "https://www.ameli.fr/"
+    link_text: "Ameli - Download attestation"
+    validity_days: null
+
+  - id: "cr_non_polygamy"
+    profiles: ["common"]
+    category: "administrative"
+    name_fr: "Déclaration sur l'honneur de non polygamie"
+    name_en: "Declaration of Non-Polygamy"
+    description: "Required if married and from a country where polygamy is legal. Sworn statement that you are not in a polygamous marriage."
+    link: null
+    link_text: "Signed personal statement"
+    validity_days: null
+
+  # Integration documents
+  - id: "cr_french_b1"
+    profiles: ["common"]
+    category: "integration"
+    name_fr: "Attestation niveau B1 français"
+    name_en: "French B1 Level Certificate"
+    description: "Diploma, test result, or linguistic attestation proving French proficiency at B1 level or higher. Exempt if over 65."
+    link: "https://www.service-public.fr/particuliers/vosdroits/F34501"
+    link_text: "Language requirements"
+    validity_days: null
+
+  - id: "cr_civic_exam"
+    profiles: ["common"]
+    category: "integration"
+    name_fr: "Attestation de réussite examen civique"
+    name_en: "Civic Exam Success Certificate"
+    description: "Certificate proving you passed the civic examination about French values and institutions."
+    link: "https://www.service-public.fr/particuliers/vosdroits/F39530"
+    link_text: "Civic exam information"
+    validity_days: null
+
+  - id: "cr_republican_commitment"
+    profiles: ["common"]
+    category: "integration"
+    name_fr: "Engagement à respecter les principes de la République"
+    name_en: "Republican Principles Commitment"
+    description: "Signed document committing to respect the principles of the French Republic."
+    link: "https://www.service-public.fr/particuliers/vosdroits/F38329"
+    link_text: "Download form"
+    validity_days: null
+
+  # Payment
+  - id: "cr_timbre_fiscal"
+    profiles: ["common"]
+    category: "payment"
+    name_fr: "Timbre fiscal (225€)"
+    name_en: "Tax Stamp (€225)"
+    description: "€200 tax + €25 stamp duty. Can be purchased online. Required at card pickup."
+    link: "https://timbres.impots.gouv.fr/"
+    link_text: "Purchase online"
+    validity_days: null
